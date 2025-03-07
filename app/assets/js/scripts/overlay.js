@@ -274,7 +274,7 @@ async function populateServerListings(){
     let htmlString = ''
     for(const serv of servers){
         htmlString += `<button class="serverListing" servid="${serv.rawServer.id}" ${serv.rawServer.id === giaSel ? 'selected' : ''}>
-            ${genelateIcon(serv.rawServer.icon, serv.rawServer.name)}
+            ${generateIcon(serv.rawServer.icon, serv.rawServer.name)}
             <div class="serverListingDetails">
                 <span class="serverListingName">${serv.rawServer.name}</span>
                 <span class="serverListingDescription">${serv.rawServer.description}</span>
@@ -314,7 +314,7 @@ function stringToColor(str) {
 /**
  * サーバー情報をもとにアイコンのHTMLタグを生成する
  */
-function genelateIcon(iconPath, packName) {
+function generateIcon(iconPath, packName) {
     if (iconPath) {
         return `<img class="serverListingImg" src="${iconPath}"/>`
     } else {

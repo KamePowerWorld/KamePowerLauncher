@@ -3699,7 +3699,10 @@ input:checked + .toggleSwitchSlider:before {
     height: 100%;
     font-size: 28px;
     font-weight: bolder;
-    color: green
+    color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .serverListing {
